@@ -1,0 +1,410 @@
+/* ============================
+   General Styling
+=============================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif; /* Clean and modern font */
+  background: linear-gradient(to bottom right, #f7f9fc, #eaf3fc); /* Subtle gradient */
+  color: #333;
+}
+
+.app-container {
+  max-width: 100%; /* Full page width */
+  margin: 20px auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-height: 95vh;
+}
+
+/* ============================
+ Header Styling
+=============================== */
+.app-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e4e7eb; /* Thin border for separation */
+}
+
+.app-header h1 {
+  font-size: 4.5rem; /* Larger font size */
+  color: #2b6cb0; /* Professional deep blue */
+  font-weight: bold;
+  font-family: "Playfair Display", serif; /* Elegant font for a premium feel */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* ============================
+ Form Section Styling
+=============================== */
+.ticket-form {
+  width: 100%;
+  max-width: 1400px; /* Full-page width for the form */
+  background: #f7fcff; /* Light blue background */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 50px;
+}
+
+.ticket-form h2 {
+  font-size: 2.8rem;
+  color: #2c5282;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Field Styling */
+.form-input {
+  display: block;
+  width: 100%;
+  height: 60px; /* Fixed input height */
+  padding: 16px;
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Larger input font */
+  border: 2px solid #b0bec5; /* Light gray border */
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: border-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.form-input:focus {
+  border-color: #457b9d; /* Highlighted border on focus */
+  box-shadow: 0 4px 10px rgba(69, 123, 157, 0.3); /* Shadow on focus */
+  outline: none;
+}
+
+/* Wide Description Box with Wider Border */
+.form-textarea {
+  display: block;
+  width: 100%; /* Full page width */
+  height: 600px; /* Larger fixed height for detailed entries */
+  max-width: 1400px; /* Ensures alignment with the form width */
+  padding: 20px;
+  font-size: 1.6rem; /* Larger font for better readability */
+  margin-bottom: 20px;
+  border: 4px solid #4e73df; /* Wider and prominent border */
+  border-radius: 12px; /* Rounded corners */
+  background: #ffffff;
+  resize: none; /* Disables resizing */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow for emphasis */
+  transition: border-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.form-textarea:focus {
+  border-color: #1d3557; /* Darker blue focus border */
+  box-shadow: 0 6px 12px rgba(29, 53, 87, 0.3); /* Enhanced focus shadow */
+  outline: none;
+}
+
+/* Button Styling */
+.form-button {
+  width: 100%;
+  padding: 18px;
+  margin-top: 20px; /* Adds spacing above the button */
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  background: #1d3557; /* Navy blue */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-button:hover {
+  background: #457b9d; /* Lighter blue */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* ============================
+ Ticket List Section
+=============================== */
+.ticket-list {
+  width: 100%;
+  max-width: 1400px; /* Matches the form width */
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  margin-top: 20px; /* Spacing above the ticket list */
+}
+
+.ticket-list h2 {
+  font-size: 2.8rem;
+  color: #2c5282;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* Ticket Items */
+.ticket-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fbfd; /* Soft white background */
+  border: 1px solid #e0e4eb;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.ticket-item:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Hover shadow */
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px; /* Adds space between ticket name and status */
+  flex: 1; /* Ensures proper alignment */
+}
+
+.ticket-details strong {
+  font-size: 1.8rem; /* Larger font for name */
+  color: #1d3557; /* Navy blue */
+}
+
+.ticket-details span {
+  font-size: 1.5rem; /* Larger font for status */
+  color: #718096; /* Subtle gray */
+}
+
+/* ============================
+ Ticket Actions Styling
+=============================== */
+.ticket-actions {
+  display: flex;
+  gap: 15px; /* Adds spacing between action buttons */
+}
+
+.view-button,
+.edit-button,
+.delete-button {
+  padding: 14px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+/* View Button */
+.view-button {
+  background: #38a169; /* Green button */
+  color: #fff;
+}
+
+.view-button:hover {
+  background: #48bb78;
+  transform: translateY(-3px);
+}
+
+/* Edit Button */
+.edit-button {
+  background: #ed8936; /* Orange button */
+  color: #fff;
+}
+
+.edit-button:hover {
+  background: #f6ad55;
+  transform: translateY(-3px);
+}
+
+/* Delete Button */
+.delete-button {
+  background: #e53e3e; /* Red button */
+  color: #fff;
+}
+
+.delete-button:hover {
+  background: #f56565;
+  transform: translateY(-3px);
+}
+/* ============================
+   Search Bar Styling
+=============================== */
+.form-input {
+  display: block;
+  width: 100%;
+  max-width: 500px; /* Limited width for search bar */
+  height: 50px; /* Height of search bar */
+  margin: 20px auto; /* Centered layout with margin */
+  padding: 10px 15px; /* Padding inside the bar */
+  font-size: 1.4rem; /* Larger font size for readability */
+  border: 2px solid #4e73df; /* Professional blue border */
+  border-radius: 8px; /* Smooth rounded corners */
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.form-input:focus {
+  border-color: #1d3557; /* Darker blue when focused */
+  box-shadow: 0 4px 12px rgba(29, 53, 87, 0.3); /* Focus shadow effect */
+  outline: none;
+}
+
+/* ============================
+ Filter Dropdown Styling
+=============================== */
+.form-select {
+  display: inline-block;
+  width: auto;
+  height: 50px; /* Same height as search bar */
+  margin-left: 15px; /* Space from the search bar */
+  padding: 10px;
+  font-size: 1.4rem; /* Matches search bar font size */
+  font-weight: bold;
+  color: #2c5282; /* Professional blue text */
+  background: #ffffff;
+  border: 2px solid #4e73df;
+  border-radius: 8px; /* Smooth rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer; /* Pointer cursor for dropdown */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-select:hover, .form-select:focus {
+  border-color: #1d3557; /* Highlight on hover/focus */
+  box-shadow: 0 4px 10px rgba(29, 53, 87, 0.3); /* Enhanced shadow on hover/focus */
+}
+
+/* ============================
+ Pagination Buttons
+=============================== */
+.pagination {
+  display: flex;
+  justify-content: center; /* Center-align buttons */
+  margin-top: 20px; /* Space above pagination */
+  gap: 10px; /* Space between buttons */
+}
+
+.page-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4e73df;
+  background: #ffffff;
+  border: 2px solid #4e73df; /* Matches other input styles */
+  border-radius: 50%; /* Circular buttons */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-button:hover, .page-button.active-page {
+  background: #4e73df; /* Filled color for hover/active */
+  color: #ffffff; /* White text on active/hover */
+  box-shadow: 0 4px 12px rgba(29, 53, 87, 0.3); /* Enhanced shadow */
+}
+
+/* ============================
+ Dark Mode Toggle Button
+=============================== */
+.toggle-dark-mode-button {
+  position: absolute; /* Fixed at the top-right of the page */
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #4e73df; /* Professional blue */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Prominent shadow */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-dark-mode-button:hover {
+  background: #2c5282; /* Darker blue on hover */
+  transform: scale(1.05); /* Subtle scaling on hover */
+}
+
+/* ============================
+ Styled Icons (Buttons in Actions)
+=============================== */
+.view-button, .edit-button, .delete-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize; /* Capitalized text for consistency */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+/* View Button */
+.view-button {
+  background: #38a169; /* Green button for View */
+  color: #ffffff;
+}
+
+.view-button:hover {
+  background: #2f855a; /* Darker green on hover */
+  transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+/* Edit Button */
+.edit-button {
+  background: #ed8936; /* Orange button for Edit */
+  color: #ffffff;
+}
+
+.edit-button:hover {
+  background: #dd6b20; /* Darker orange on hover */
+  transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+/* Delete Button */
+.delete-button {
+  background: #e53e3e; /* Red button for Delete */
+  color: #ffffff;
+}
+
+.delete-button:hover {
+  background: #c53030; /* Darker red on hover */
+  transform: translateY(-3px); /* Subtle lift on hover */
+}
+/* Status Change Button Styling */
+.status-button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+}
